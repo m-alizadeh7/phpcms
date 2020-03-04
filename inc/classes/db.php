@@ -1,7 +1,7 @@
 <?php
 
 
-class db
+class DB
 {
    
     private $serverName;
