@@ -7,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -15,7 +15,22 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
+            </li> -->
+            <?php
+            include_once "../classes/DB.php" ;
+            include_once "../classes/category_cls.php" ;
+            $cat=new Category ();
+            $cats=$cat->getAllCategories();
+            foreach ($cats as $c) {
+                ?>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><?=$c["name"]?><a/>
             </li>
+            
+            <?php 
+            } 
+            ?>
+
         </ul>
         <!--<span class="navbar-text">-->
         <!--Navbar text with an inline element-->

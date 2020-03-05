@@ -1,6 +1,6 @@
 <?php include "inc/header.php" ?>
 <?php include "inc/navigation.php" ?>
-
+<?php include_once "classes/category_cls.php"?>
 <!-- Page Content -->
 <div class="container">
 
