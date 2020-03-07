@@ -12,7 +12,7 @@ class DB
 
     protected function connect (){
 
-        $this->servername="localhost";
+        $this->serverName="localhost";
         $this->username="root";
         $this->password="";
         $this->dbName="phpcms";
@@ -20,10 +20,10 @@ class DB
         try {
             $dsn = "mysql:host=$this->serverName;dbname=$this->dbName;charset=$this->charset";
             $pdo = new PDO ($dsn, $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXEPTION);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $pdo;
         }catch (Exception $e){
-            die("connection failed ".$e->getmassage()_)
+            die("connection failed ".$e->getMessage());
         }
 
     }
