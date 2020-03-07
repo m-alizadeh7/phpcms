@@ -17,8 +17,8 @@
                 <a class="nav-link" href="#">Pricing</a>
             </li> -->
             <?php
-            include_once "../classes/DB.php" ;
-            include_once "../classes/category_cls.php" ;
+            include_once "inc/classes/db.php" ;
+            include_once "inc/classes/Categorys_cls.php" ;
             $cat=new Category ();
             $cats=$cat->getAllCategories();
             foreach ($cats as $c) {
